@@ -7,4 +7,12 @@ function getAverage(a,b){
 }
 
 var myResult = getAverage(7,12);        //global var
-console.log("the average is " + myResult);
+
+function logResult(){
+    console.log("the average is " + myResult + " inside the function");
+}
+
+logResult();
+
+console.log(myResult);  //available
+console.log(average);   //not available
