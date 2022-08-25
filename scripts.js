@@ -1,16 +1,13 @@
-var a = "four";
-var b = 7;
+var myString = 'I\'m a "fun" ninja string.';
 
-if(isNaN(a)){
-    console.log("that ain't even a number")
-} else {
-    console.log("the meaning of life is " + (a * b))
-}
+console.log(myString.length);
+console.log(myString.toUpperCase());
+console.log(myString.toLowerCase());
+console.log(myString.indexOf("string"));
+console.log(myString.indexOf("ninja"));     //not in string == -1
 
-/* DOUBLE NEGATIVE:
-if(!isNaN(a)){
-    console.log("the meaning of life is " + (a * b))
+if (myString.indexOf("ninja") === -1){
+    console.log("the word ninja is not in the string")
 } else {
-    console.log("that ain't even a number")
+    console.log("the word ninja starts at position " + myString.indexOf("ninja"));
 }
-*/
