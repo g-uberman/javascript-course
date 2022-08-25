@@ -1,14 +1,16 @@
-var str = "hello, world";
+var myArray = [];       // created empty array
 
-var str2 = str.slice(3,9);      // start-end slice
-console.log(str2);
+myArray[0] = 25;        // assigned number at 1st position
+myArray[1] = 35;
+myArray[2] = true;
+myArray[3] = "hello";
 
-var str3 = str.slice(3);        // start only slice
-console.log(str3);
+console.log(myArray);
 
-var tags = "meat, ham, salami, pork, beef, chicken";    // string
-console.log(tags);
+var myOtherArray = [10,20,"hi",false];
+console.log(myOtherArray);
 
-var tagsArray = tags.split(",");        // string split into array, cut at commas
-console.log(tagsArray);
-console.log(typeof tagsArray);          // object
+var myThirdArray = new Array(5)     // created array with 5 empty slots
+
+console.log(myArray.length);        // number of elements
+myArray.sort                        // sort lowest to highest or alphabetically
