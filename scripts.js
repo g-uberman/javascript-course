@@ -1,10 +1,10 @@
-function getAverage(a,b,c,d,e,f){
+function getAverage(a,b){
 
-    var average = (a + b + c + d + e + f) / 6;
+    var average = (a + b) / 2;      //local var
     console.log(average)
-    return average;         //save var average outside function
+    return average;     //function result: average given
 
 }
 
-var myResult = getAverage(7,12,100,77,23,60);   //third value ignored
+var myResult = getAverage(7,12);        //global var
 console.log("the average is " + myResult);
