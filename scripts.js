@@ -1,6 +1,14 @@
-var string1 = "abc"
-var string2 = "ABC"
+var str = "hello, world";
 
-console.log(string1 === string2);
-console.log(string1.toLowerCase() === string2.toLowerCase());
-console.log(string1 > string2);     //lowercase letters are greater than capital in JS
+var str2 = str.slice(3,9);      // start-end slice
+console.log(str2);
+
+var str3 = str.slice(3);        // start only slice
+console.log(str3);
+
+var tags = "meat, ham, salami, pork, beef, chicken";    // string
+console.log(tags);
+
+var tagsArray = tags.split(",");        // string split into array, cut at commas
+console.log(tagsArray);
+console.log(typeof tagsArray);          // object
