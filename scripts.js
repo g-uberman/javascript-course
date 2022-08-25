@@ -1,18 +1,11 @@
-function getAverage(a,b){
+var a = 5;
+var b = 5;
 
-    var average = (a + b) / 2;      //local var
-    console.log(average)
-    return average;     //function result: average given
+console.log(a + b);
+console.log(typeof (a + b) );
 
-}
-
-var myResult = getAverage(7,12);        //global var
-
-function logResult(){
-    console.log("the average is " + myResult + " inside the function");
-}
-
-logResult();
-
-console.log(myResult);  //available
-console.log(average);   //not available
+console.log(Math.round(7.5));
+console.log(Math.floor(7.5));
+console.log(Math.ceil(7.5));
+console.log(Math.max(7,5,9,3));
+console.log(Math.PI);
