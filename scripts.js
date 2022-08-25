@@ -1,9 +1,15 @@
-var links = document.getElementsByTagName("a");
+for (i = 0; i < 10; i++) {
 
-for (i = 1; i <= links.length; i++) {
-    
-    console.log("This is link number " + i);
+    if(i === 5 || i === 3){
+        console.log("number ignored")
+        continue;
+    }
 
+    console.log(i);
+
+    if(i === 7) {
+        break;
+    }
 }
 
-document.write("All links now looped.");
+console.log("I have broken out of the loop.")
