@@ -1,11 +1,16 @@
-var a = 5;
-var b = 5;
+var a = "four";
+var b = 7;
 
-console.log(a + b);
-console.log(typeof (a + b) );
+if(isNaN(a)){
+    console.log("that ain't even a number")
+} else {
+    console.log("the meaning of life is " + (a * b))
+}
 
-console.log(Math.round(7.5));
-console.log(Math.floor(7.5));
-console.log(Math.ceil(7.5));
-console.log(Math.max(7,5,9,3));
-console.log(Math.PI);
+/* DOUBLE NEGATIVE:
+if(!isNaN(a)){
+    console.log("the meaning of life is " + (a * b))
+} else {
+    console.log("that ain't even a number")
+}
+*/
