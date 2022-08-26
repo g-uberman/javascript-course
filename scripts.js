@@ -1,10 +1,17 @@
-// log current date & time:
-var myDate = new Date();
-console.log(myDate);
+var birthday = new Date(1987, 4, 16, 3, 29, 15);
+var birthday1 = new Date(1987, 4, 16, 3, 29, 15);
+console.log(birthday);
 
-// create date object (year, month, day, hours, minutes, seconds):
-var myPastDate = new Date(1545, 11, 2, 10, 30, 15);
-var myFutureDate = new Date(40000, 0, 28);
+console.log(birthday.getMonth());
+console.log(birthday.getFullYear());
+console.log(birthday.getDate());
+console.log(birthday.getDay());     // day of the week (0-6)
+console.log(birthday.getTime());    // number of milliseconds since Jan 1st 1970
+console.log(birthday.getHours());
 
-console.log(myPastDate);
-console.log(myFutureDate);
+// compare dates by getTime:
+if(birthday.getTime() == birthday1.getTime()){
+    console.log("birthdays are equal");
+} else{
+    console.log("birthdays are not equal");
+}
