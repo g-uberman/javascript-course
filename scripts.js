@@ -1,26 +1,24 @@
-//ONCLICK EVENT ONLY SETUP BY A FUNCTION, NOT BY DEFAULT
-function setUpEvents() {
+var colourChanger = document.getElementById("colour-changer");
+var colours = ["green", "greenyellow", "yellow", "orange", "red", "brown", "olive"];
+var counter = 0;
+var colourNotification = document.getElementById("notification");
+var body = document.getElementsByTagName("body")[0]
 
-    var content = document.getElementById("content");
-    var button = document.getElementById("show-more");
+//colour cycle function (on call only)
+function changeColour(){
+    if (counter >= colours.length) {
+        counter = 0;
+    }
+    colourChanger.style.background = colours[counter];
+    counter++;
+}
 
-    // SHOW MORE BUTTON
-    button.onclick = function () {
-        if (content.className == "open") {
-            //shrink box
-            content.className = "";
-            button.innerHTML = "Show More";
-        } else {
-            //expand box
-            content.className = "open";
-            button.innerHTML = "Show Less";
-        }
-    };
+//call changeColour every 3000 milliseconds
+var myTimer = setInterval(changeColour, 1000);
 
-};
-
-//AUTORUN SETUP FUNCTION AFTER PAGE IS FULLY LOADED
-//makes sure that the needed elements are already in place
-window.onload = function () {
-    setUpEvents();
-};
+//onclick stop
+colourChanger.onclick = function(){
+    clearInterval(myTimer);
+    colourNotification.innerHTML = "Colour chosen";
+    body.style.background = colours[counter - 1];
+}
