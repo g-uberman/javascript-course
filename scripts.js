@@ -1,24 +1,18 @@
-var colourChanger = document.getElementById("colour-changer");
-var colours = ["green", "greenyellow", "yellow", "orange", "red", "brown", "olive"];
-var counter = 0;
-var colourNotification = document.getElementById("notification");
-var body = document.getElementsByTagName("body")[0]
+var myForm = document.forms.myForm;
 
-//colour cycle function (on call only)
-function changeColour(){
-    if (counter >= colours.length) {
-        counter = 0;
-    }
-    colourChanger.style.background = colours[counter];
-    counter++;
+// target property
+myForm.name
+
+// target property value
+myForm.name.value
+myForm.colour.value
+
+// ONFOCUS: active or clicked element:
+myForm.name.onfocus = function(){
+    myForm.name.style.border = "4px solid pink";
 }
 
-//call changeColour every 3000 milliseconds
-var myTimer = setInterval(changeColour, 1000);
-
-//onclick stop
-colourChanger.onclick = function(){
-    clearInterval(myTimer);
-    colourNotification.innerHTML = "Colour chosen";
-    body.style.background = colours[counter - 1];
+// BLURRED: inactive element:
+myForm.name.onblur = function(){
+    myForm.name.style.border = "none";
 }
