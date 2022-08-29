@@ -1,18 +1,13 @@
 var myForm = document.forms.myForm;
+var message = document.getElementById("message");
 
-// target property
-myForm.name
-
-// target property value
-myForm.name.value
-myForm.colour.value
-
-// ONFOCUS: active or clicked element:
-myForm.name.onfocus = function(){
-    myForm.name.style.border = "4px solid pink";
-}
-
-// BLURRED: inactive element:
-myForm.name.onblur = function(){
-    myForm.name.style.border = "none";
+myForm.onsubmit = function () {
+    // if name is empty:
+    if (myForm.name.value == "") {
+        message.innerHTML = "Please enter a name.";
+        return false;
+    } else {
+        message.innerHTML = "";
+        return true;
+    }
 }
