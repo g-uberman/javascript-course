@@ -1,13 +1,25 @@
-var myForm = document.forms.myForm;
-var message = document.getElementById("message");
+var arr = [-1, 4, 21, -7];
 
-myForm.onsubmit = function () {
-    // if name is empty:
-    if (myForm.name.value == "") {
-        message.innerHTML = "Please enter a name.";
-        return false;
-    } else {
-        message.innerHTML = "";
-        return true;
+function getAbsSum(arr) {
+
+    // absolute value array
+
+    const absoluteValueArray = (array) => {
+        return array.map(Math.abs);
     }
+
+    arr = (absoluteValueArray(arr));
+
+    // reduce array
+
+    const initialValue = 0;
+    const sumWithInitial = arr.reduce(
+        (previousValue, currentValue) => previousValue + currentValue,
+        initialValue
+    );
+
+    return sumWithInitial;
+
 }
+
+getAbsSum(arr);
